@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+    <!-- <link rel="preload"  href="house_good.png"" as="image">
+  <link rel="preload"  href="house_bad.png"" as="image"> -->
+    <link rel="stylesheet" href="blog.css">
+
+</head>
+
+<body id="body" class="_no-scroll">
+    <div class="background-container">
+        <div class="bg bg-old" id="bg1"></div>
+        <div class="bg bg-new" id="bg2"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="../8.html" class="logo"><img src="../img/logo.svg" alt="Logo" class="logo-svg"></a>
+                <div class="logo-text">HOUSE <span style="color: #C41300;">DOCTOR</span></div>
+            </div>
+            <ul class="nav-links" id="navLinks">
+          <li><a href="../8.html#home" onclick="document.getElementById('navLinks').classList.toggle('active'); ">Home</a></li>
+        <li><a href="../8.html#pricing" onclick="document.getElementById('navLinks').classList.toggle('active')">Pricing</a></li>
+        <li><a href="../8.html#sample_report" onclick="document.getElementById('navLinks').classList.toggle('active')">Sample reports</a></li>
+        <li><a href="../8.html#faq" onclick="document.getElementById('navLinks').classList.toggle('active')">FAQ</a></li>
+        <li><a href="../8.html#blog" onclick="document.getElementById('navLinks').classList.toggle('active')">Buyer's guide</a></li>
+        <li><a href="./blog/blog.html" onclick="document.getElementById('navLinks').classList.toggle('active')">Blog</a></li>
+        <li><a href="../8.html#contact" onclick="document.getElementById('navLinks').classList.toggle('active')">Contact</a></li>
+      </ul>
+            </ul>
+    
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- =============================================
+     BLOG PREVIEW
+     ============================================= -->
+    <section class="blog" id="blog">
+        <div class="blog__container">
+            <div class="blog__header">
+                <div>
+                    <span class="section-label" data-lang="en">Our blog</span>
+                    <span class="section-label hidden" data-lang="es">Casos Reales e Insights</span>
+                    <h2 class="heading-xl" data-lang="en">Real Cases</h2>
+                    <h2 class="heading-xl hidden" data-lang="es">Desde el campo</h2>
+                </div>
+
+
+            </div>
+            <div class="blog__grid" id = "blog_grid">
+
+                <!-- <div class="blog-card" id = "blog_post_template_old">
+                    <div class="blog-card__thumb"><img src="..."></div>
+                    <div class="blog-card__body">
+                        <span class="blog-card__tag">@tag</span>
+                        <h3 class="blog-card__title">@title</h3>
+                        <p class="blog-card__excerpt">@excerpt</p>
+                        <p class="blog-card__content hidden">@content</p>
+                        <div class="blog-card__meta">@meta</div>
+                        
+                    </div>
+                </div> -->
+
+                <template id="blog_post_template" >
+                    <div class="blog-card" onclick="togglePost(this);"">
+                        <div class="blog-card__thumb--sm"><img src="../img/sea_side_house.png" id="img"></div>
+                        <div class="blog-card__body">
+                            <span class="blog-card__tag" id = "tag">@tag</span>
+                            <h3 class="blog-card__title" id = "title">@title</h3>
+                            <p class="blog-card__excerpt" id ="excerpt">@excerpt</p>
+                            <p class="blog-card__content" id = "content">@content</p>
+                            <div class="blog-card__meta" id = "meta">@meta</div>
+                
+                        </div>
+                    </div>
+                </template>
+
+
+                <!-- <div class="blog-card">
+                    <div class="blog-card__thumb blog-card__thumb--sm">🔧</div>
+                    <div class="blog-card__body">
+                        <span class="blog-card__tag">KEY RISKS</span>
+                        <h3 class="blog-card__title blog-card__title--sm">Top 10 hidden defects in Spanish villas buyers
+                            miss</h3>
+                        <p class="blog-card__excerpt" style="font-size:12px;">What the real estate agent won't tell you
+                            about
+                            Spanish construction.</p>
+                        <div class="blog-card__meta">May 2025 · 8 min read</div>
+                        <a href="#blog" class="blog__case-btn" data-lang="en">Key risks for property buyers</a>
+                    </div>
+                </div> -->
+
+   
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =============================================
+     FOOTER
+     ============================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__logo-text">House Doctor</div>
+          <p class="footer__desc">Independent property inspections in Spain for buyers who want to know before they
+            sign.</p>
+
+        </div>
+
+        <div>
+          <div class="footer__col-title">Locations</div>
+          <ul class="footer__links">
+            <li><a href="/home-inspection-alicante/">Alicante</a></li>
+            <li><a href="/home-inspection-valencia/">Valencia</a></li>
+            <li><a href="/home-inspection-marbella/">Marbella</a></li>
+            <li><a href="/home-inspection-malaga/">Málaga</a></li>
+            <li><a href="/home-inspection-madrid/">Madrid</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Company</div>
+          <ul class="footer__links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Materials</div>
+          <ul class="footer__links">
+            <li><a href="xxx">Sample report (house)</a></li>
+            <li><a href="#xxx">Sample report (apartment)</a></li>
+            <li><a href="#xxx">Property buyer's guide</a></li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 House Doctor. All rights reserved.</span>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+    <!-- <div class="mobile-sticky">
+        <a href="#book" class="ms-report">View sample report</a>
+    </div> -->
+
+    <script src="blog.js"></script>
+</body>
+
+</html>
