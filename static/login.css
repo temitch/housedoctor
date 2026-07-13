@@ -1,0 +1,215 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:
+    linear-gradient(rgba(42,42,42,.70),
+                    rgba(1,1,1,.70));
+  ;
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.login-container{
+
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+
+}
+
+.login-card{
+
+    width:420px;
+
+    background:rgba(255,255,255,.25);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:20px;
+
+    padding:45px;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.35);
+
+}
+
+.logo{
+
+    width:70px;
+    height:70px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:32px;
+
+    margin-bottom:25px;
+
+}
+
+.logo-text{
+    font-size: 30px;
+}
+
+
+h1{
+
+    color:white;
+    text-align:center;
+    margin-bottom:10px;
+    font-weight:700;
+
+}
+
+p{
+
+    text-align:center;
+    color:#dbeafe;
+    margin-bottom:35px;
+
+}
+
+.input-group{
+
+    margin-bottom:22px;
+
+}
+
+label{
+
+    display:block;
+    margin-bottom:8px;
+    color:white;
+    font-size:.9rem;
+
+}
+
+input{
+    width:100%;
+    padding:15px;
+    border-radius:25px;
+    border:none;
+    outline:none;
+    font-size:15px;
+    background:rgba(255,255,255);
+}
+
+input:focus{
+    box-shadow:0 0 0 2px #fa7465ff;
+}
+
+.options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:28px;
+
+    font-size:14px;
+
+}
+
+.remember{
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:white;
+
+}
+
+.remember input{
+    width:auto;
+}
+
+.options a{
+    color:#bfdbfe;
+    text-decoration:none;
+}
+
+.options a:hover{
+    color:white;
+}
+
+button{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:25px;
+    background:#fa7465ff;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.5s;
+}
+
+button:hover{
+
+    background:#c41300;
+
+    /* transform:translateY(-2px); */
+
+}
+
+.footer{
+    margin-top:28px;
+    text-align:center;
+    color:white;
+
+}
+
+.footer a{
+
+    color:#93c5fd;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.footer a:hover{
+
+    color:white;
+
+}
+
+@media (max-width:500px){
+
+.login-card{
+
+    width:100%;
+    padding:35px;
+
+}
+
+}

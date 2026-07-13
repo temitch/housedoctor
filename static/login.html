@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEST</title>
+  <!-- <link rel="preload"  href="house_good.png"" as="image">
+  <link rel="preload"  href="house_bad.png"" as="image"> -->
+  
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body id="body" class = "_no-scroll">
+  <!-- <div class="container">
+    <div class="login-container">
+      <h1>Login</h1>
+ 
+        <form id="login-form" action="javascript:handleClick()">
+        <input type="text" name="username" placeholder="Username" value = "username" required>
+        <input type="password" name="password" placeholder="Password" value = "password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div> -->
+
+
+<div class="login-container">
+
+    <form class="login-card">
+
+        <a href="..">
+        <div class="logo">
+           <img src="/img/logo.svg" width="60" height="60">
+        </div>
+        </a>
+
+        <h1><div class="logo-text">HOUSE <span style="color: #fa7465;">DOCTOR</span></div></h1>
+
+        <p>Sign in to view photo and video from inspection</p>
+
+<form id="login-form" action="javascript:handleClick()" method = "POST">
+    <div class="input-group">
+
+        <label>Login</label>
+
+        <input type="text" name="username" placeholder="Enter your email" required value="demo">
+
+    </div>
+
+    <div class="input-group">
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Enter your password" required value="demo">
+    </div>
+
+
+    <button type="button" onClick="handleClick()">Sign In</button>
+
+</form>
+
+
+
+
+<script>
+    function handleClick() {
+        const username = document.querySelector('input[name="username"]').value;
+        const password = document.querySelector('input[name="password"]').value;
+
+        console.log(username + " " +password);
+
+        
+        fetch('/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, password })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.token) {
+                    localStorage.setItem('token', data.token);
+                    console.log('Login successful, token stored in localStorage ' + data.token);
+
+                    const redirectUrl = "../portal";
+                    setCookie('token', data.token, 365); // Set cookie for 1 day
+                    window.location.href = redirectUrl;
+
+
+                    // fetch(redirectUrl, {
+                    //     headers: {
+                    //         'Authorization': `Bearer ${data.token}`
+                    //     }
+                    // })
+                    //     .then(() => {
+                    //         window.location.href = redirectUrl;
+                    //     })
+                    //     .catch((error) => {
+                    //         console.error(error);
+                    //     });
+
+
+
+                } else {
+                    alert('Invalid credentials');
+                }
+            });
+    }
+
+
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+</script>
+</body>
+</html> 
