@@ -1,0 +1,2333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLIENT PORTAL</title>
+    <!-- <link rel="preload"  href="house_good.png"" as="image">
+  <link rel="preload"  href="house_bad.png"" as="image"> -->
+    <link rel="stylesheet" href="../portal.css">
+    <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" type="text/javascript"></script>
+
+    <!-- nanogallery2 -->
+    <link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet"
+        type="text/css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+</head>
+
+<body id="body">
+    <div class="top_container">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../" class="logo"><img src="../img/logo.svg" alt="Logo" class="logo-svg"></a>
+                    <div class="logo-text">HOUSE <span style="color: #C41300;">DOCTOR</span></div>
+                </div>
+
+
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="break"></div>
+
+                <div class="nav-links" id="navLinks">
+                    <div class="nav-link-row">
+                        <!-- <a href="#home" onclick="document.getElementById('navLinks').classList.toggle('active'); ">Home</a> -->
+
+                        <li class="menu-item" id="l1">
+                            <div class="calc__extra" id="d2">
+                                <label class="calc__label" id="extra-pool">
+                                    <!-- <input type="checkbox" onchange="updateBoxes(this)" value="c1" type="checkbox"
+                                    class="calc__parent-checkbox" id="c1"> -->
+                                    <!-- <span class="calc__extra-name">Category 1</span>  -->
+                                    <div id="c1" class="calc__parent-checkbox-label" onClick="updateBoxes(this)"><a
+                                            href="#lc1">Site&
+                                            grounds / common areas</a></div>
+                                </label>
+                                <span class="calc__icon toggle-btn" onclick="toggleInspectionCategory(this)"
+                                    aria-expanded="false" id="btn_test">▼</span>
+
+                                <!-- <button class="toggle-btn" aria-expanded="false">▼</button> -->
+                                <div class="calc__submenu" hidden>
+                                    <ul class="calc__submenu">
+                                        <li class="calc__child-menu-item">
+                                            <div id="s1_1" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls1_1">Fence and retaining
+                                                    walls</a></div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s1_2" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls1_2">Terraces, patios</a></div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s1_3" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls1_3">TStaircases, balustrades,
+                                                    ramps</a></div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s1_4" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls1_4">Rainwater drainage</a>
+                                            </div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s1_5" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls1_5">Main entrance</a></div>
+                                        </li>
+
+                                        <li class="calc__child-menu-item">
+                                            <div id="s1_6" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls1_6">Intercom and lightning</a>
+                                            </div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s1_7" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls1_7">Permanent sun
+                                                    protection</a></div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s1_8" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls1_8">Irrigation system</a></div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s1_9" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls1_9">Landscaping</a></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </div>
+                    <div class="nav-link-row">
+                        <li class="menu-item">
+                            <div class="calc__extra">
+                                <label class="calc__label">
+                                    <!-- <input type="checkbox" onchange="updateBoxes(this)" value="c2" type="checkbox"
+                    class="calc__parent-checkbox" id="c2"> -->
+                                    <!-- <span class="calc__extra-name">Category 1</span>  -->
+                                    <div for="c2" class="calc__parent-checkbox-label" onClick="updateBoxes(this)"><a
+                                            href="#lc2">Structural integrity,
+                                            exterior</a></div>
+                                    <!-- <span class="calc__extra-price" id="price-c2">€200</span> -->
+                                </label>
+                                <span class="calc__icon toggle-btn" onclick="toggleInspectionCategory(this)"
+                                    aria-expanded="false">▼</span>
+
+                                <!-- <button class="toggle-btn" aria-expanded="false">▼</button> -->
+                                <div class="calc__submenu" hidden>
+                                    <ul class="calc__submenu" id="c2">
+                                        <li class="calc__child-menu-item">
+                                            <!-- <input type="checkbox" onchange="updateBoxes(this)" value="s2_1" class="calc__child-checkbox"
+                            id="s2_1"> -->
+                                            <div id="s2_1" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls2_1">Foundation & basement</a>
+                                            </div>
+                                        </li>
+
+                                        <li class="calc__child-menu-item">
+                                            <!-- <input type="checkbox" onchange="updateBoxes(this)" value="s2_2" class="calc__child-checkbox" 
+                            id="s2_2"> -->
+                                            <div id="s2_2" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls2_2">Walls, facades</a></div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <!-- <input type="checkbox" onchange="updateBoxes(this)" value="s2_3" class="calc__child-checkbox"
+                            id="s2_3"> -->
+                                            <div id="s2_3" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls2_3">Foundation Plinth &
+                                                    Apron</a>
+                                            </div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <!-- <input type="checkbox" onchange="updateBoxes(this)" value="s2_4" class="calc__child-checkbox"
+                            id="s2_4"> -->
+                                            <div id="s2_4" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls2_4">Main entrance</a></div>
+                                        </li>
+
+                                        <li class="calc__child-menu-item">
+                                            <!-- <input type="checkbox" onchange="updateBoxes(this)" value="s2_5" class="calc__child-checkbox"
+                            id="s2_5"> -->
+                                            <div id="s2_5" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls2_5">Other architectural
+                                                    elements</a>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                    </div>
+
+
+
+                    <div class="nav-link-row">
+                        <li class="menu-item">
+                            <div class="calc__extra">
+                                <label class="calc__label">
+                                    <div for="c3" class="calc__parent-checkbox-label" onClick="updateBoxes(this)"><a
+                                            href="#lc3">Roof</a></div>
+                                </label>
+                                <span class="calc__icon toggle-btn" onclick="toggleInspectionCategory(this)"
+                                    aria-expanded="false">▼</span>
+                                <div class="calc__submenu" hidden>
+                                    <ul class="calc__submenu" id="c2">
+                                        <li class="calc__child-menu-item">
+                                            <div id="s3_1" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls3_1">Roof covering</a>
+                                            </div>
+                                        </li>
+
+                                        <li class="calc__child-menu-item">
+                                            <div id="s3_2" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls3_2">Roof framing</a></div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s3_3" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls3_3">Vapor and water
+                                                    proofing</a>
+                                            </div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s3_4" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls3_4">Connections, flashes</a>
+                                            </div>
+                                        </li>
+
+                                        <li class="calc__child-menu-item">
+                                            <div id="s3_5" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls3_5">Gutters, downspouts,
+                                                    drainage</a>
+                                            </div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s3_6" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls3_6">Other roof elements</a>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                    </div>
+
+
+
+
+
+
+
+                    <div class="nav-link-row">
+                        <li class="menu-item">
+                            <div class="calc__extra">
+                                <label class="calc__label">
+                                    <div for="c4" class="calc__parent-checkbox-label" onClick="updateBoxes(this)"><a
+                                            href="#lc4">Floor area, interior finishes</a></div>
+                                </label>
+                                <span class="calc__icon toggle-btn" onclick="toggleInspectionCategory(this)"
+                                    aria-expanded="false">▼</span>
+                                <div class="calc__submenu" hidden>
+                                    <ul class="calc__submenu" id="c4">
+                                        <li class="calc__child-menu-item">
+                                            <div id="s4_1" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls4_1">Floor area</a>
+                                            </div>
+                                        </li>
+
+                                        <li class="calc__child-menu-item">
+                                            <div id="s4_2" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls4_2">Living rooms</a></div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s4_3" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls4_3">Bathrooms</a>
+                                            </div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s4_4" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls4_4">Floors</a></div>
+                                        </li>
+
+                                        <li class="calc__child-menu-item">
+                                            <div id="s4_5" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls4_5">Ceilings</a>
+                                            </div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s4_6" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls4_6">Doors</a>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+
+
+
+                    <div class="nav-link-row">
+                        <li class="menu-item">
+                            <div class="calc__extra">
+                                <label class="calc__label">
+                                    <div for="c5" class="calc__parent-checkbox-label" onClick="updateBoxes(this)"><a
+                                            href="#lc5">Humidity, water penetration</a></div>
+                                </label>
+                                <span class="calc__icon toggle-btn" onclick="toggleInspectionCategory(this)"
+                                    aria-expanded="false">▼</span>
+                                <div class="calc__submenu" hidden>
+                                    <ul class="calc__submenu" id="c4">
+                                        <li class="calc__child-menu-item">
+                                            <div id="s5_1" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls5_1">Air humidity</a>
+                                            </div>
+                                        </li>
+
+                                        <li class="calc__child-menu-item">
+                                            <div id="s5_2" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls5_2"> Floor&wall humidity in
+                                                    living areas</a></div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s5_3" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls5_3">Floor& wall humidity in wet
+                                                    areas</a>
+                                            </div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s5_4" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls5_4">Floor&wall humidity levels
+                                                    in other areas</a></div>
+                                        </li>
+
+                                        <li class="calc__child-menu-item">
+                                            <div id="s5_5" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls5_5">Other signs of leakages and
+                                                    high humidity</a>
+                                            </div>
+                                            <!-- </li>
+                                                                                <li class="calc__child-menu-item">
+                                            <div id="s5_6" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls5_6">Doors</a>
+                                            </div>
+                                        </li> -->
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+
+
+
+                                       <div class="nav-link-row">
+                        <li class="menu-item">
+                            <div class="calc__extra">
+                                <label class="calc__label">
+                                    <div for="c6" class="calc__parent-checkbox-label" onClick="updateBoxes(this)"><a
+                                            href="#lc6">Thermal insulation</a></div>
+                                </label>
+                                <span class="calc__icon toggle-btn" onclick="toggleInspectionCategory(this)"
+                                    aria-expanded="false">▼</span>
+                                <div class="calc__submenu" hidden>
+                                    <ul class="calc__submenu" id="c6">
+                                        <li class="calc__child-menu-item">
+                                            <div id="s6_1" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls6_1">Walls, floors</a>
+                                            </div>
+                                        </li>
+
+                                        <li class="calc__child-menu-item">
+                                            <div id="s6_2" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls6_2"> Ceilings</a></div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s6_3" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls6_3"> Windows, blinds, shutters</a>
+                                            </div>
+                                        </li>
+                                        <!-- <li class="calc__child-menu-item">
+                                            <div id="s5_4" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls5_4">Floor&wall humidity levels
+                                                    in other areas</a></div>
+                                        </li>
+
+                                        <li class="calc__child-menu-item">
+                                            <div id="s5_5" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls5_5">Other signs of leakages and
+                                                    high humidity</a>
+                                            </div> -->
+                                            <!-- </li>
+                                                                                <li class="calc__child-menu-item">
+                                            <div id="s5_6" class="calc__child-checkbox-label"
+                                                onClick="updateBoxes(this)"><a href="#ls5_6">Doors</a>
+                                            </div>
+                                        </li> -->
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+
+
+
+                                                           <div class="nav-link-row">
+                        <li class="menu-item">
+                            <div class="calc__extra">
+                                <label class="calc__label">
+                                    <div for="c7" class="calc__parent-checkbox-label" onClick="updateBoxes(this)"><a href="#lc7">Electircal
+                                            system</a></div>
+                                </label>
+                                <span class="calc__icon toggle-btn" onclick="toggleInspectionCategory(this)" aria-expanded="false">▼</span>
+                                <div class="calc__submenu" hidden>
+                                    <ul class="calc__submenu" id="c7">
+                                        <li class="calc__child-menu-item">
+                                            <div id="s7_1" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls7_1">Outdoor service box, meter</a>
+                                            </div>
+                                        </li>
+                        
+                                        <li class="calc__child-menu-item">
+                                            <div id="s7_2" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a href="#ls7_2">
+                                                    Distribution panel, main switch, fuses</a></div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s7_3" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a href="#ls7_3">
+                                                    Number of lines, potential overloads</a>
+                                            </div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s7_4" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls7_4">Thermal imaging</a></div>
+                                        </li>
+                        
+                                        <li class="calc__child-menu-item">
+                                            <div id="s7_5" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls7_5">Grounding</a>
+                                            </div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s7_6" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls7_6">Protection devices</a>
+                                            </div>
+                                        </li>
+                                                                             <li class="calc__child-menu-item">
+                                            <div id="s7_7" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls7_7">Power outlets, switches, lighting</a>
+                                            </div>
+                                        </li>
+                        
+                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        </div>
+
+
+
+
+                        
+
+                                                           <div class="nav-link-row">
+                        <li class="menu-item">
+                            <div class="calc__extra">
+                                <label class="calc__label">
+                                    <div for="c8" class="calc__parent-checkbox-label" onClick="updateBoxes(this)"><a href="#lc8">Plumbing System</a></div>
+                                </label>
+                                <span class="calc__icon toggle-btn" onclick="toggleInspectionCategory(this)" aria-expanded="false">▼</span>
+                                <div class="calc__submenu" hidden>
+                                    <ul class="calc__submenu" id="c7">
+                                        <li class="calc__child-menu-item">
+                                            <div id="s8_1" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls8_1">Main valve, counter</a>
+                                            </div>
+                                        </li>
+                        
+                                        <li class="calc__child-menu-item">
+                                            <div id="s8_2" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a href="#ls8_2">
+                                                    Pressure and flow rate</a></div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s8_3" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a href="#ls8_3">
+                                                    Valves, taps, showers</a>
+                                            </div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s8_4" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls8_4">Toilets, sinks, bathtubs</a></div>
+                                        </li>
+                        
+                                        <li class="calc__child-menu-item">
+                                            <div id="s8_5" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls8_5">Water heaters</a>
+                                            </div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s8_6" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls8_6">Water quality</a>
+                                            </div>
+                                        </li>
+                                                                             <!-- <li class="calc__child-menu-item">
+                                            <div id="s8_7" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls8_7">Power outlets, switches, lighting</a>
+                                            </div>
+                                        </li> -->
+                        
+                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        </div>
+
+
+
+                                                           <div class="nav-link-row">
+                        <li class="menu-item">
+                            <div class="calc__extra">
+                                <label class="calc__label">
+                                    <div for="c9" class="calc__parent-checkbox-label" onClick="updateBoxes(this)">
+                                        <a href="#lc9">Ventilation and AC</a></div>
+                                </label>
+                                <span class="calc__icon toggle-btn" onclick="toggleInspectionCategory(this)" aria-expanded="false">▼</span>
+                                <div class="calc__submenu" hidden>
+                                    <ul class="calc__submenu" id="c9">
+                                        <li class="calc__child-menu-item">
+                                            <div id="s9_1" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls9_1">Mechanical ventilation</a>
+                                            </div>
+                                        </li>
+                        
+                                        <li class="calc__child-menu-item">
+                                            <div id="s9_2" class="calc__child-checkbox-label" onClick="updateBoxes(this)">
+                                                <a href="#ls9_2">
+                                                    Exhaust ventilation in wet areas</a></div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s9_3" class="calc__child-checkbox-label" onClick="updateBoxes(this)">
+                                                <a href="#ls9_3">
+                                                    Exhaust ventilation in kitchen</a>
+                                            </div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s9_4" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls9_4">Air conditioners, capacity adequacy</a></div>
+                                        </li>
+                        
+                                        <!-- <li class="calc__child-menu-item">
+                                            <div id="s8_5" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls8_5">Water heaters</a>
+                                            </div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s8_6" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls8_6">Water quality</a>
+                                            </div>
+                                        </li> -->
+                                                                             <!-- <li class="calc__child-menu-item">
+                                            <div id="s8_7" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls8_7">Power outlets, switches, lighting</a>
+                                            </div>
+                                        </li> -->
+                        
+                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        </div>
+
+
+
+                        
+
+                                                           <div class="nav-link-row">
+                        <li class="menu-item">
+                            <div class="calc__extra">
+                                <label class="calc__label">
+                                    <div for="c10" class="calc__parent-checkbox-label" onClick="updateBoxes(this)">
+                                        <a href="#lc10">Heating</a></div>
+                                </label>
+                                <span class="calc__icon toggle-btn" onclick="toggleInspectionCategory(this)" aria-expanded="false">▼</span>
+                                <div class="calc__submenu" hidden>
+                                    <ul class="calc__submenu" id="c10">
+                                        <li class="calc__child-menu-item">
+                                            <div id="s10_1" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls10_1">Heating system, type and capacity adequacy</a>
+                                            </div>
+                                        </li>
+                        
+                                        <li class="calc__child-menu-item">
+                                            <div id="s10_2" class="calc__child-checkbox-label" onClick="updateBoxes(this)">
+                                                <a href="#ls10_2">
+                                                   Heated floors</a></div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s10_3" class="calc__child-checkbox-label" onClick="updateBoxes(this)">
+                                                <a href="#ls10_3">
+                                                    Radiators, convectors, fan coils</a>
+                                            </div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s10_4" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls10_4">Fireplaces, stoves, chimneys</a></div>
+                                        </li>
+                        
+                                        <!-- <li class="calc__child-menu-item">
+                                            <div id="s8_5" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls8_5">Water heaters</a>
+                                            </div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s8_6" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls8_6">Water quality</a>
+                                            </div>
+                                        </li> -->
+                                                                             <!-- <li class="calc__child-menu-item">
+                                            <div id="s8_7" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls8_7">Power outlets, switches, lighting</a>
+                                            </div>
+                                        </li> -->
+                        
+                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        </div>
+
+
+
+
+                                                           <div class="nav-link-row">
+                        <li class="menu-item">
+                            <div class="calc__extra">
+                                <label class="calc__label">
+                                    <div for="c11" class="calc__parent-checkbox-label" onClick="updateBoxes(this)">
+                                        <a href="#lc11">Safety and Ecology</a></div>
+                                </label>
+                                <span class="calc__icon toggle-btn" onclick="toggleInspectionCategory(this)" aria-expanded="false">▼</span>
+                                <div class="calc__submenu" hidden>
+                                    <ul class="calc__submenu" id="c11">
+                                        <li class="calc__child-menu-item">
+                                            <div id="s11_1" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls11_1">Mould, fungi, bacteria, allergens</a>
+                                            </div>
+                                        </li>
+                        
+                                        <li class="calc__child-menu-item">
+                                            <div id="s11_2" class="calc__child-checkbox-label" onClick="updateBoxes(this)">
+                                                <a href="#ls11_2">
+                                                   Noize, lighting levels</a></div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s11_3" class="calc__child-checkbox-label" onClick="updateBoxes(this)">
+                                                <a href="#ls11_3">
+                                                    Smoke and CO detectors, fire alarms</a>
+                                            </div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s11_4" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls11_4">Security systems, cameras, alarms</a></div>
+                                        </li>
+                        
+                                        <li class="calc__child-menu-item">
+                                            <div id="s11_5" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls11_5">Electromagnetic fields, radiation</a>
+                                            </div>
+                                        </li>
+                                        <!-- <li class="calc__child-menu-item">
+                                            <div id="s8_6" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls8_6">Water quality</a>
+                                            </div>
+                                        </li> -->
+                                                                             <!-- <li class="calc__child-menu-item">
+                                            <div id="s8_7" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls8_7">Power outlets, switches, lighting</a>
+                                            </div>
+                                        </li> -->
+                        
+                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        </div>
+
+
+ <div class="nav-link-row">
+                        <li class="menu-item">
+                            <div class="calc__extra">
+                                <label class="calc__label">
+                                    <div for="c12" class="calc__parent-checkbox-label" onClick="updateBoxes(this)">
+                                        <a href="#lc12">
+Swimming pool</a></div>
+                                </label>
+                                <span class="calc__icon toggle-btn" onclick="toggleInspectionCategory(this)" aria-expanded="false">▼</span>
+                                <div class="calc__submenu" hidden>
+                                    <ul class="calc__submenu" id="c12">
+                                        <li class="calc__child-menu-item">
+                                            <div id="s12_1" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls12_1">Appearance and Pool Interior</a>
+                                            </div>
+                                        </li>
+                        
+                                        <li class="calc__child-menu-item">
+                                            <div id="s12_2" class="calc__child-checkbox-label" onClick="updateBoxes(this)">
+                                                <a href="#ls12_2">
+                                                   Filtering and circulation system</a></div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s12_3" class="calc__child-checkbox-label" onClick="updateBoxes(this)">
+                                                <a href="#ls12_3">
+                                                   Water quality</a>
+                                            </div>
+                                        </li>
+                                        <!-- <li class="calc__child-menu-item">
+                                            <div id="s11_4" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls11_4">Security systems, cameras, alarms</a></div>
+                                        </li>
+                        
+                                        <li class="calc__child-menu-item">
+                                            <div id="s11_5" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls11_5">Electromagnetic fields, radiation</a>
+                                            </div>
+                                        </li> -->
+                                        <!-- <li class="calc__child-menu-item">
+                                            <div id="s8_6" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls8_6">Water quality</a>
+                                            </div>
+                                        </li> -->
+                                                                             <!-- <li class="calc__child-menu-item">
+                                            <div id="s8_7" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls8_7">Power outlets, switches, lighting</a>
+                                            </div>
+                                        </li> -->
+                        
+                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        </div>
+
+
+
+
+
+ <div class="nav-link-row">
+                        <li class="menu-item">
+                            <div class="calc__extra">
+                                <label class="calc__label">
+                                    <div for="c12" class="calc__parent-checkbox-label" onClick="updateBoxes(this)">
+                                        <a href="#lc13">
+
+Garage</a></div>
+                                </label>
+                                <span class="calc__icon toggle-btn" onclick="toggleInspectionCategory(this)" aria-expanded="false">▼</span>
+                                <div class="calc__submenu" hidden>
+                                    <ul class="calc__submenu" id="c13">
+                                        <li class="calc__child-menu-item">
+                                            <div id="s13_1" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls13_1">Vehicle access, doors, gates</a>
+                                            </div>
+                                        </li>
+                        
+                                        <li class="calc__child-menu-item">
+                                            <div id="s13_2" class="calc__child-checkbox-label" onClick="updateBoxes(this)">
+                                                <a href="#ls13_2">
+                                                  Electrical system, lighting, outlets</a></div>
+                                        </li>
+                                        <li class="calc__child-menu-item">
+                                            <div id="s13_3" class="calc__child-checkbox-label" onClick="updateBoxes(this)">
+                                                <a href="#ls13_3">
+                                                   Fire safety, ventilation, water drainage</a>
+                                            </div>
+                                        </li>
+                                        <!-- <li class="calc__child-menu-item">
+                                            <div id="s11_4" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls11_4">Security systems, cameras, alarms</a></div>
+                                        </li>
+                        
+                                        <li class="calc__child-menu-item">
+                                            <div id="s11_5" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls11_5">Electromagnetic fields, radiation</a>
+                                            </div>
+                                        </li> -->
+                                        <!-- <li class="calc__child-menu-item">
+                                            <div id="s8_6" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls8_6">Water quality</a>
+                                            </div>
+                                        </li> -->
+                                                                             <!-- <li class="calc__child-menu-item">
+                                            <div id="s8_7" class="calc__child-checkbox-label" onClick="updateBoxes(this)"><a
+                                                    href="#ls8_7">Power outlets, switches, lighting</a>
+                                            </div>
+                                        </li> -->
+                        
+                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        </div>
+
+
+
+
+        </nav>
+
+
+
+
+
+
+        <!-- <div class="menu_spacer"></div> -->
+        <section class="header_">
+            <div class="container">
+                <h1 class="heading-xl">Inspection materials:</h1>
+                <p>Address:</p>
+                <p>Date:</p>
+
+            </div>
+        </section>
+        <section class="section_">
+            <div class="container">
+                <div class="heading-xl" id="lc1">Site& grounds / common areas</div>
+                <div class="section-label" id="ls1_1">Fence and retaining walls (<%= imgs['1']['1'].length %>)</div>
+                <div id="nanogallery_s1_1" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                              }'>
+                    <% for(var i=0; i < imgs['1']['1'].length; i++) { %>
+                        <a href="client_media/<%= imgs['1']['1'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['1']['1'][i] %>">
+                            <%= des['1']['1'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls1_2">Terraces, patios (<%= imgs['1']['2'].length %>)</div>
+                <div id="nanogallery_s1_2" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['1']['2'].length; i++) { %>
+                        <a href="client_media/<%= imgs['1']['2'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['1']['2'][i] %>">
+                            <%= des['1']['2'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls1_3">Staircases, balustrades, ramps (<%= imgs['1']['3'].length %>)</div>
+                <div id="nanogallery_s1_3" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['1']['3'].length; i++) { %>
+                        <a href="client_media/<%= imgs['1']['3'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['1']['3'][i] %>">
+                            <%= des['1']['3'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls1_4">Rainwater drainage (<%= imgs['1']['4'].length %>)</div>
+                <div id="nanogallery_s1_4" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['1']['4'].length; i++) { %>
+                        <a href="client_media/<%= imgs['1']['4'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['1']['4'][i] %>">
+                            <%= des['1']['4'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls1_5">Main entrance (<%= imgs['1']['5'].length %>)</div>
+                <div id="nanogallery_s1_5" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['1']['5'].length; i++) { %>
+                        <a href="client_media/<%= imgs['1']['5'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['1']['5'][i] %>">
+                            <%= des['1']['5'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+                <div class="section-label" id="ls1_6">Intercom and lighting (<%= imgs['1']['6'].length %>)</div>
+                <div id="nanogallery_s1_6" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['1']['6'].length; i++) { %>
+                        <a href="client_media/<%= imgs['1']['6'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['1']['6'][i] %>">
+                            <%= des['1']['6'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls1_7">Permanent sun protection (<%= imgs['1']['7'].length %>)</div>
+                <div id="nanogallery_s1_7" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                   "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                                                              }'>
+                    <% for(var i=0; i < imgs['1']['7'].length; i++) { %>
+                        <a href="client_media/<%= imgs['1']['7'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['1']['7'][i] %>">
+                            <%= des['1']['7'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="section_">
+            <div class="container">
+                <div class="heading-xl" id="lc2">Structural integrity, exterior </div>
+                <div class="section-label" id="ls2_1">Foundation & basement (<%= imgs['2']['1'].length %>)</div>
+                <div id="nanogallery_s2_1" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                              }'>
+                    <% for(var i=0; i < imgs['2']['1'].length; i++) { %>
+                        <a href="client_media/<%= imgs['2']['1'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['2']['1'][i] %>">
+                            <%= des['2']['1'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls2_2">Walls, facades (<%= imgs['2']['2'].length %>)</div>
+                <div id="nanogallery_s2_2" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['2']['2'].length; i++) { %>
+                        <a href="client_media/<%= imgs['2']['2'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['2']['2'][i] %>">
+                            <%= des['2']['2'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls2_3">Foundation Plinth & Apron (<%= imgs['2']['3'].length %>)</div>
+                <div id="nanogallery_s2_3" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['2']['3'].length; i++) { %>
+                        <a href="client_media/<%= imgs['2']['3'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['2']['3'][i] %>">
+                            <%= des['2']['3'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls2_4">Main entrance (<%= imgs['2']['4'].length %>)</div>
+                <div id="nanogallery_s2_4" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['2']['4'].length; i++) { %>
+                        <a href="client_media/<%= imgs['2']['4'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['2']['4'][i] %>">
+                            <%= des['2']['4'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls2_5">Other architectural elements (<%= imgs['2']['5'].length %>)</div>
+                <div id="nanogallery_s2_5" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['2']['5'].length; i++) { %>
+                        <a href="client_media/<%= imgs['2']['5'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['2']['5'][i] %>">
+                            <%= des['2']['5'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <section class="section_">
+            <div class="container">
+                <div class="heading-xl" id="lc3">Roof</div>
+                <div class="section-label" id="ls3_1">Roof covering (<%= imgs['3']['1'].length %>)</div>
+                <div id="nanogallery_s3_1" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                              }'>
+                    <% for(var i=0; i < imgs['3']['1'].length; i++) { %>
+                        <a href="client_media/<%= imgs['3']['1'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['3']['1'][i] %>">
+                            <%= des['3']['1'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls3_2">Roof framing (<%= imgs['3']['2'].length %>)</div>
+                <div id="nanogallery_s3_2" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['3']['2'].length; i++) { %>
+                        <a href="client_media/<%= imgs['3']['2'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['3']['2'][i] %>">
+                            <%= des['3']['2'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls3_3">Vapor and water proofing (<%= imgs['3']['3'].length %>)</div>
+                <div id="nanogallery_s3_3" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['3']['3'].length; i++) { %>
+                        <a href="client_media/<%= imgs['3']['3'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['3']['3'][i] %>">
+                            <%= des['3']['3'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls3_4">Connections, flashes (<%= imgs['3']['4'].length %>)< /div>
+                <div id="nanogallery_s3_4" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['3']['4'].length; i++) { %>
+                        <a href="client_media/<%= imgs['3']['4'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['3']['4'][i] %>">
+                            <%= des['3']['4'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls3_5">Gutters, downspouts, drainage (<%= imgs['3']['5'].length %>)</div>
+                <div id="nanogallery_s3_5" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['3']['5'].length; i++) { %>
+                        <a href="client_media/<%= imgs['3']['5'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['3']['5'][i] %>">
+                            <%= des['3']['5'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+                <div class="section-label" id="ls3_6">Other roof elements (<%= imgs['3']['6'].length %>)</div>
+                <div id="nanogallery_s3_6" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['3']['6'].length; i++) { %>
+                        <a href="client_media/<%= imgs['3']['6'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['3']['6'][i] %>">
+                            <%= des['3']['6'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+
+
+        <section class="section_">
+            <div class="container">
+                <div class="heading-xl" id="lc4">Floor area, interior finishes</div>
+                <div class="section-label" id="ls4_1">Floor area (<%= imgs['4']['1'].length %>)</div>
+                <div id="nanogallery_s4_1" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                              }'>
+                    <% for(var i=0; i < imgs['4']['1'].length; i++) { %>
+                        <a href="client_media/<%= imgs['4']['1'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['4']['1'][i] %>">
+                            <%= des['4']['1'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls4_2">Living rooms (<%= imgs['4']['2'].length %>)</div>
+                <div id="nanogallery_s4_2" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['4']['2'].length; i++) { %>
+                        <a href="client_media/<%= imgs['4']['2'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['4']['2'][i] %>">
+                            <%= des['4']['2'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls4_3">Bathrooms (<%= imgs['4']['3'].length %>)</div>
+                <div id="nanogallery_s4_3" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['4']['3'].length; i++) { %>
+                        <a href="client_media/<%= imgs['4']['3'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['4']['3'][i] %>">
+                            <%= des['4']['3'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls4_4">Floors (<%= imgs['4']['4'].length %>)</div>
+                <div id="nanogallery_s4_4" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['4']['4'].length; i++) { %>
+                        <a href="client_media/<%= imgs['4']['4'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['4']['4'][i] %>">
+                            <%= des['4']['4'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls4_5">Ceilings (<%= imgs['4']['5'].length %>)</div>
+                <div id="nanogallery_s4_5" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['4']['5'].length; i++) { %>
+                        <a href="client_media/<%= imgs['4']['5'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['4']['5'][i] %>">
+                            <%= des['4']['5'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+                <div class="section-label" id="ls4_6">Doors (<%= imgs['4']['6'].length %>)</div>
+                <div id="nanogallery_s4_6" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['4']['6'].length; i++) { %>
+                        <a href="client_media/<%= imgs['4']['6'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['4']['6'][i] %>">
+                            <%= des['4']['6'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+        <section class="section_">
+            <div class="container">
+                <div class="heading-xl" id="lc5">Humidity, water penetration</div>
+                <div class="section-label" id="ls5_1">Air humidity (<%= imgs['5']['1'].length %>)</div>
+                <div id="nanogallery_s5_1" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                              }'>
+                    <% for(var i=0; i < imgs['5']['1'].length; i++) { %>
+                        <a href="client_media/<%= imgs['5']['1'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['5']['1'][i] %>">
+                            <%= des['5']['1'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls5_2">Floor&wall humidity in living areas (<%= imgs['5']['2'].length %>)</div>
+                <div id="nanogallery_s5_2" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['5']['2'].length; i++) { %>
+                        <a href="client_media/<%= imgs['5']['2'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['5']['2'][i] %>">
+                            <%= des['5']['2'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls5_3">Floor& wall humidity in wet areas (<%= imgs['5']['3'].length %>)</div>
+                <div id="nanogallery_s5_3" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['5']['3'].length; i++) { %>
+                        <a href="client_media/<%= imgs['5']['3'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['5']['3'][i] %>">
+                            <%= des['5']['3'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls5_4">Floor&wall humidity levels in other areas (<%= imgs['5']['4'].length %>)</div>
+                <div id="nanogallery_s5_4" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['5']['4'].length; i++) { %>
+                        <a href="client_media/<%= imgs['5']['4'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['5']['4'][i] %>">
+                            <%= des['5']['4'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls5_5"> Other signs of leakages and high humidity (<%= imgs['5']['5'].length %>)</div>
+                <div id="nanogallery_s5_5" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['5']['5'].length; i++) { %>
+                        <a href="client_media/<%= imgs['5']['5'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['5']['5'][i] %>">
+                            <%= des['5']['5'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+                <!-- <div class="section-label" id="ls4_6">Doors</div>
+                <div id="nanogallery_s4_6" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['4']['6'].length; i++) { %>
+                        <a href="client_media/<%= imgs['4']['6'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['4']['6'][i] %>">
+                            <%= des['4']['6'][i] %>
+                        </a>
+                        <% } %>
+                </div> -->
+
+
+            </div>
+        </section>
+
+
+
+        <section class="section_">
+            <div class="container">
+                <div class="heading-xl" id="lc6">Thermal insulation</div>
+                <div class="section-label" id="ls6_1">Walls, floors (<%= imgs['6']['1'].length %>)</div>
+                <div id="nanogallery_s6_1" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                              }'>
+                    <% for(var i=0; i < imgs['6']['1'].length; i++) { %>
+                        <a href="client_media/<%= imgs['6']['1'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['6']['1'][i] %>">
+                            <%= des['6']['1'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls6_2">Ceilings (<%= imgs['6']['2'].length %>)</div>
+                <div id="nanogallery_s6_2" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['6']['2'].length; i++) { %>
+                        <a href="client_media/<%= imgs['6']['2'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['6']['2'][i] %>">
+                            <%= des['6']['2'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls6_3">Windows, blinds, shutters (<%= imgs['6']['3'].length %>)</div>
+                <div id="nanogallery_s6_3" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['6']['3'].length; i++) { %>
+                        <a href="client_media/<%= imgs['6']['3'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['6']['3'][i] %>">
+                            <%= des['6']['3'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+                <!-- 
+                <div class="section-label" id="ls5_4">Floor&wall humidity levels in other areas</div>
+                <div id="nanogallery_s5_4" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['5']['4'].length; i++) { %>
+                        <a href="client_media/<%= imgs['5']['4'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['5']['4'][i] %>">
+                            <%= des['5']['4'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls5_5"> Other signs of leakages and high humidity</div>
+                <div id="nanogallery_s5_5" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['5']['5'].length; i++) { %>
+                        <a href="client_media/<%= imgs['5']['5'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['5']['5'][i] %>">
+                            <%= des['5']['5'][i] %>
+                        </a>
+                        <% } %>
+                </div> -->
+
+
+                <!-- <div class="section-label" id="ls4_6">Doors</div>
+                <div id="nanogallery_s4_6" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['4']['6'].length; i++) { %>
+                        <a href="client_media/<%= imgs['4']['6'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['4']['6'][i] %>">
+                            <%= des['4']['6'][i] %>
+                        </a>
+                        <% } %>
+                </div> -->
+
+
+            </div>
+        </section>
+
+
+
+
+        <section class="section_">
+            <div class="container">
+                <div class="heading-xl" id="lc7">Electircal system</div>
+                <div class="section-label" id="ls7_1">Outdoor service box, meter (<%= imgs['7']['1'].length %>)</div>
+                <div id="nanogallery_s7_1" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                              }'>
+                    <% for(var i=0; i < imgs['7']['1'].length; i++) { %>
+                        <a href="client_media/<%= imgs['7']['1'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['7']['1'][i] %>">
+                            <%= des['7']['1'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls7_2"> Distribution panel, main switch, fuses (<%= imgs['7']['2'].length %>)</div>
+                <div id="nanogallery_s7_2" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['7']['2'].length; i++) { %>
+                        <a href="client_media/<%= imgs['7']['2'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['7']['2'][i] %>">
+                            <%= des['7']['2'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls7_3"> Number of lines, potential overloads (<%= imgs['7']['3'].length %>)</div>
+                <div id="nanogallery_s7_3" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['7']['3'].length; i++) { %>
+                        <a href="client_media/<%= imgs['7']['3'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['7']['3'][i] %>">
+                            <%= des['7']['3'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls7_4">Thermal imaging (<%= imgs['7']['4'].length %>)</div>
+                <div id="nanogallery_s7_4" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['7']['4'].length; i++) { %>
+                        <a href="client_media/<%= imgs['7']['4'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['7']['4'][i] %>">
+                            <%= des['7']['4'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls7_5">Grounding (<%= imgs['7']['5'].length %>)</div>
+                <div id="nanogallery_s7_5" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['7']['5'].length; i++) { %>
+                        <a href="client_media/<%= imgs['7']['5'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['7']['5'][i] %>">
+                            <%= des['7']['5'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+                <div class="section-label" id="ls7_6">Protection devices (<%= imgs['7']['6'].length %>)</div>
+                <div id="nanogallery_s7_6" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['7']['6'].length; i++) { %>
+                        <a href="client_media/<%= imgs['7']['6'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['7']['6'][i] %>">
+                            <%= des['7']['6'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+                <div class="section-label" id="ls7_7"> Power outlets, switches, lighting (<%= imgs['7']['7'].length %>)</div>
+                <div id="nanogallery_s7_7" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['7']['7'].length; i++) { %>
+                        <a href="client_media/<%= imgs['7']['7'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['7']['7'][i] %>">
+                            <%= des['7']['7'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+        <section class="section_">
+            <div class="container">
+                <div class="heading-xl" id="lc8">Plumbing System</div>
+                <div class="section-label" id="ls8_1">Main valve, counter (<%= imgs['8']['1'].length %>)</div>
+                <div id="nanogallery_s8_1" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                              }'>
+                    <% for(var i=0; i < imgs['8']['1'].length; i++) { %>
+                        <a href="client_media/<%= imgs['8']['1'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['8']['1'][i] %>">
+                            <%= des['8']['1'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls8_2">Pressure and flow rate (<%= imgs['8']['2'].length %>)</div>
+                <div id="nanogallery_s8_2" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['8']['2'].length; i++) { %>
+                        <a href="client_media/<%= imgs['8']['2'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['8']['2'][i] %>">
+                            <%= des['8']['2'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls8_3"> Valves, taps, showers (<%= imgs['8']['3'].length %>)</div>
+                <div id="nanogallery_s8_3" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['8']['3'].length; i++) { %>
+                        <a href="client_media/<%= imgs['8']['3'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['8']['3'][i] %>">
+                            <%= des['8']['3'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls8_4">Toilets, sinks, bathtubs (<%= imgs['8']['4'].length %>)</div>
+                <div id="nanogallery_s8_4" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['8']['4'].length; i++) { %>
+                        <a href="client_media/<%= imgs['8']['4'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['8']['4'][i] %>">
+                            <%= des['8']['4'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls8_5">Water heaters (<%= imgs['8']['5'].length %>)</div>
+                <div id="nanogallery_s8_5" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['8']['5'].length; i++) { %>
+                        <a href="client_media/<%= imgs['8']['5'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['8']['5'][i] %>">
+                            <%= des['8']['5'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+                <div class="section-label" id="ls8_6">Water quality (<%= imgs['8']['6'].length %>)</div>
+                <div id="nanogallery_s8_6" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['8']['6'].length; i++) { %>
+                        <a href="client_media/<%= imgs['8']['6'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['8']['6'][i] %>">
+                            <%= des['8']['6'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+                <!-- <div class="section-label" id="ls7_7"> Power outlets, switches, lighting</div>
+                <div id="nanogallery_s7_7" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['7']['7'].length; i++) { %>
+                        <a href="client_media/<%= imgs['7']['7'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['7']['7'][i] %>">
+                            <%= des['7']['7'][i] %>
+                        </a>
+                        <% } %>
+                </div> -->
+
+
+            </div>
+        </section>
+
+
+
+
+
+        <section class="section_">
+            <div class="container">
+                <div class="heading-xl" id="lc9">Ventilation and AC</div>
+                <div class="section-label" id="ls9_1">Mechanical ventilation (<%= imgs['9']['1'].length %>)</div>
+                <div id="nanogallery_s9_1" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                              }'>
+                    <% for(var i=0; i < imgs['9']['1'].length; i++) { %>
+                        <a href="client_media/<%= imgs['9']['1'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['9']['1'][i] %>">
+                            <%= des['9']['1'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls9_2">Exhaust ventilation in wet areas (<%= imgs['9']['2'].length %>)</div>
+                <div id="nanogallery_s9_2" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['9']['2'].length; i++) { %>
+                        <a href="client_media/<%= imgs['9']['2'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['9']['2'][i] %>">
+                            <%= des['9']['2'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls9_3"> Exhaust ventilation in kitchen (<%= imgs['9']['3'].length %>)</div>
+                <div id="nanogallery_s9_3" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['9']['3'].length; i++) { %>
+                        <a href="client_media/<%= imgs['9']['3'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['9']['3'][i] %>">
+                            <%= des['9']['3'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls9_4">Air conditioners, capacity adequacy (<%= imgs['9']['4'].length %>)</div>
+                <div id="nanogallery_s9_4" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['9']['4'].length; i++) { %>
+                        <a href="client_media/<%= imgs['9']['4'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['9']['4'][i] %>">
+                            <%= des['9']['4'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <!-- <div class="section-label" id="ls9_5">Water heaters</div>
+                <div id="nanogallery_s9_5" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['9']['5'].length; i++) { %>
+                        <a href="client_media/<%= imgs['9']['5'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['9']['5'][i] %>">
+                            <%= des['9']['5'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+                                <div class="section-label" id="ls9_6">Water quality</div>
+                <div id="nanogallery_s9_6" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['9']['6'].length; i++) { %>
+                        <a href="client_media/<%= imgs['9']['6'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['9']['6'][i] %>">
+                            <%= des['9']['6'][i] %>
+                        </a>
+                        <% } %>
+                </div> -->
+
+                <!-- <div class="section-label" id="ls7_7"> Power outlets, switches, lighting</div>
+                <div id="nanogallery_s7_7" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['7']['7'].length; i++) { %>
+                        <a href="client_media/<%= imgs['7']['7'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['7']['7'][i] %>">
+                            <%= des['7']['7'][i] %>
+                        </a>
+                        <% } %>
+                </div> -->
+
+
+            </div>
+        </section>
+
+
+
+
+
+        <section class="section_">
+            <div class="container">
+                <div class="heading-xl" id="lc10">Heating</div>
+                <div class="section-label" id="ls10_1">Heating system, type and capacity adequacy (<%= imgs['10']['1'].length %>)</div>
+                <div id="nanogallery_s10_1" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                              }'>
+                    <% for(var i=0; i < imgs['10']['1'].length; i++) { %>
+                        <a href="client_media/<%= imgs['10']['1'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['10']['1'][i] %>">
+                            <%= des['10']['1'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls10_2">Heated floors (<%= imgs['10']['2'].length %>)< /div>
+                <div id="nanogallery_s10_2" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['10']['2'].length; i++) { %>
+                        <a href="client_media/<%= imgs['10']['2'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['10']['2'][i] %>">
+                            <%= des['10']['2'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls10_3">Radiators, convectors, fan coils (<%= imgs['10']['3'].length %>)</div>
+                <div id="nanogallery_s10_3" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['10']['3'].length; i++) { %>
+                        <a href="client_media/<%= imgs['10']['3'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['10']['3'][i] %>">
+                            <%= des['10']['3'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls10_4">Fireplaces, stoves, chimneys (<%= imgs['10']['4'].length %>)</div>
+                <div id="nanogallery_s10_4" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['10']['4'].length; i++) { %>
+                        <a href="client_media/<%= imgs['10']['4'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['10']['4'][i] %>">
+                            <%= des['10']['4'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <!-- <div class="section-label" id="ls9_5">Water heaters</div>
+                <div id="nanogallery_s9_5" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['9']['5'].length; i++) { %>
+                        <a href="client_media/<%= imgs['9']['5'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['9']['5'][i] %>">
+                            <%= des['9']['5'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+                                <div class="section-label" id="ls9_6">Water quality</div>
+                <div id="nanogallery_s9_6" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['9']['6'].length; i++) { %>
+                        <a href="client_media/<%= imgs['9']['6'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['9']['6'][i] %>">
+                            <%= des['9']['6'][i] %>
+                        </a>
+                        <% } %>
+                </div> -->
+
+                <!-- <div class="section-label" id="ls7_7"> Power outlets, switches, lighting</div>
+                <div id="nanogallery_s7_7" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['7']['7'].length; i++) { %>
+                        <a href="client_media/<%= imgs['7']['7'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['7']['7'][i] %>">
+                            <%= des['7']['7'][i] %>
+                        </a>
+                        <% } %>
+                </div> -->
+
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <section class="section_">
+            <div class="container">
+                <div class="heading-xl" id="lc11">Safety and Ecology</div>
+                <div class="section-label" id="ls11_1">Mould, fungi, bacteria, allergens (<%= imgs['11']['1'].length %>)</div>
+                <div id="nanogallery_s11_1" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                              }'>
+                    <% for(var i=0; i < imgs['11']['1'].length; i++) { %>
+                        <a href="client_media/<%= imgs['11']['1'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['11']['1'][i] %>">
+                            <%= des['11']['1'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls11_2">Noize, lighting levels (<%= imgs['11']['2'].length %>)</div>
+                <div id="nanogallery_s11_2" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['11']['2'].length; i++) { %>
+                        <a href="client_media/<%= imgs['11']['2'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['11']['2'][i] %>">
+                            <%= des['11']['2'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls11_3">Smoke and CO detectors, fire alarms (<%= imgs['11']['3'].length %>)</div>
+                <div id="nanogallery_s11_3" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['11']['3'].length; i++) { %>
+                        <a href="client_media/<%= imgs['11']['3'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['11']['3'][i] %>">
+                            <%= des['11']['3'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls11_4">Security systems, cameras, alarms (<%= imgs['11']['4'].length %>)</div>
+                <div id="nanogallery_s11_4" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['11']['4'].length; i++) { %>
+                        <a href="client_media/<%= imgs['11']['4'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['11']['4'][i] %>">
+                            <%= des['11']['4'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls11_5">Electromagnetic fields, radiation (<%= imgs['11']['5'].length %>)</div>
+                <div id="nanogallery_s11_5" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['11']['5'].length; i++) { %>
+                        <a href="client_media/<%= imgs['11']['5'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['11']['5'][i] %>">
+                            <%= des['11']['5'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+                <!-- <div class="section-label" id="ls9_6">Water quality</div>
+                <div id="nanogallery_s9_6" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['9']['6'].length; i++) { %>
+                        <a href="client_media/<%= imgs['9']['6'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['9']['6'][i] %>">
+                            <%= des['9']['6'][i] %>
+                        </a>
+                        <% } %>
+                </div> -->
+
+                <!-- <div class="section-label" id="ls7_7"> Power outlets, switches, lighting</div>
+                <div id="nanogallery_s7_7" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['7']['7'].length; i++) { %>
+                        <a href="client_media/<%= imgs['7']['7'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['7']['7'][i] %>">
+                            <%= des['7']['7'][i] %>
+                        </a>
+                        <% } %>
+                </div> -->
+
+
+            </div>
+        </section>
+
+
+
+        <section class="section_">
+            <div class="container">
+                <div class="heading-xl" id="lc12">Swimming pool</div>
+                <div class="section-label" id="ls12_1">Appearance and Pool Interior (<%= imgs['12']['1'].length %>)</div>
+                <div id="nanogallery_s12_1" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                              }'>
+                    <% for(var i=0; i < imgs['12']['1'].length; i++) { %>
+                        <a href="client_media/<%= imgs['12']['1'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['12']['1'][i] %>">
+                            <%= des['12']['1'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls12_2">Filtering and circulation system (<%= imgs['12']['2'].length %>)</div>
+                <div id="nanogallery_s12_2" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['12']['2'].length; i++) { %>
+                        <a href="client_media/<%= imgs['12']['2'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['12']['2'][i] %>">
+                            <%= des['12']['2'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls12_3">Water quality (<%= imgs['12']['3'].length %>)</div>
+                <div id="nanogallery_s12_3" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['12']['3'].length; i++) { %>
+                        <a href="client_media/<%= imgs['12']['3'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['12']['3'][i] %>">
+                            <%= des['12']['3'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+                <!-- 
+                <div class="section-label" id="ls11_4">Security systems, cameras, alarms</div>
+                <div id="nanogallery_s11_4" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['11']['4'].length; i++) { %>
+                        <a href="client_media/<%= imgs['11']['4'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['11']['4'][i] %>">
+                            <%= des['11']['4'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls11_5">Electromagnetic fields, radiation</div>
+                <div id="nanogallery_s11_5" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['11']['5'].length; i++) { %>
+                        <a href="client_media/<%= imgs['11']['5'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['11']['5'][i] %>">
+                            <%= des['11']['5'][i] %>
+                        </a>
+                        <% } %>
+                </div> -->
+
+
+                <!-- <div class="section-label" id="ls9_6">Water quality</div>
+                <div id="nanogallery_s9_6" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['9']['6'].length; i++) { %>
+                        <a href="client_media/<%= imgs['9']['6'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['9']['6'][i] %>">
+                            <%= des['9']['6'][i] %>
+                        </a>
+                        <% } %>
+                </div> -->
+
+                <!-- <div class="section-label" id="ls7_7"> Power outlets, switches, lighting</div>
+                <div id="nanogallery_s7_7" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['7']['7'].length; i++) { %>
+                        <a href="client_media/<%= imgs['7']['7'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['7']['7'][i] %>">
+                            <%= des['7']['7'][i] %>
+                        </a>
+                        <% } %>
+                </div> -->
+
+
+            </div>
+        </section>
+
+
+
+
+
+
+        <section class="section_">
+            <div class="container">
+                <div class="heading-xl" id="lc13">Garage</div>
+                <div class="section-label" id="ls13_1">Vehicle access, doors, gates (<%= imgs['13']['1'].length %>)</div>
+                <div id="nanogallery_s13_1" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                              }'>
+                    <% for(var i=0; i < imgs['13']['1'].length; i++) { %>
+                        <a href="client_media/<%= imgs['13']['1'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['13']['1'][i] %>">
+                            <%= des['13']['1'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls13_2">Electrical system, lighting, outlets (<%= imgs['13']['2'].length %>)</div>
+                <div id="nanogallery_s13_2" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['13']['2'].length; i++) { %>
+                        <a href="client_media/<%= imgs['13']['2'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['13']['2'][i] %>">
+                            <%= des['13']['2'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls13_3">Fire safety, ventilation, water drainage (<%= imgs['13']['3'].length %>)</div>
+                <div id="nanogallery_s13_3" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['13']['3'].length; i++) { %>
+                        <a href="client_media/<%= imgs['13']['3'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['13']['3'][i] %>">
+                            <%= des['13']['3'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+                <!-- 
+                <div class="section-label" id="ls11_4">Security systems, cameras, alarms</div>
+                <div id="nanogallery_s11_4" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['11']['4'].length; i++) { %>
+                        <a href="client_media/<%= imgs['11']['4'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['11']['4'][i] %>">
+                            <%= des['11']['4'][i] %>
+                        </a>
+                        <% } %>
+                </div>
+
+
+
+                <div class="section-label" id="ls11_5">Electromagnetic fields, radiation</div>
+                <div id="nanogallery_s11_5" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['11']['5'].length; i++) { %>
+                        <a href="client_media/<%= imgs['11']['5'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['11']['5'][i] %>">
+                            <%= des['11']['5'][i] %>
+                        </a>
+                        <% } %>
+                </div> -->
+
+
+                <!-- <div class="section-label" id="ls9_6">Water quality</div>
+                <div id="nanogallery_s9_6" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['9']['6'].length; i++) { %>
+                        <a href="client_media/<%= imgs['9']['6'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['9']['6'][i] %>">
+                            <%= des['9']['6'][i] %>
+                        </a>
+                        <% } %>
+                </div> -->
+
+                <!-- <div class="section-label" id="ls7_7"> Power outlets, switches, lighting</div>
+                <div id="nanogallery_s7_7" data-nanogallery2='{
+                                                "thumbnailHeight":  <%= thumbnailHeight %>,
+                                                "thumbnailWidth":   <%= thumbnailWidth %>,
+                                                "thumbnailAlignment": "<%= thumbnailAlignment %>",
+                                                                "itemsBaseURL":     "http://192.168.1.133:3000/"
+                                                              }'>
+                    <% for(var i=0; i < imgs['7']['7'].length; i++) { %>
+                        <a href="client_media/<%= imgs['7']['7'][i] %>"
+                            data-ngThumb="client_media/<%= thumbs['7']['7'][i] %>">
+                            <%= des['7']['7'][i] %>
+                        </a>
+                        <% } %>
+                </div> -->
+
+
+            </div>
+        </section>
+
+
+
+        <script src="../portal.js"></script>
+
+</body>
+
+</html>
